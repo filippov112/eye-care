@@ -116,3 +116,9 @@ body.theme-light {
     font-size:var(--font-text-size);
     background-color: var(--personal-folder);
 }
+#cMenuToolbarModalBar {
+    justify-content: left;
+}
+.markdown-source-view .cMenuToolbarGlassAesthetic button svg {
+    margin:7px;
+}
