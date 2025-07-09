@@ -1,0 +1,118 @@
+/* ---------------------------------------------------------------------------
+
+Eye Care Theme by @filippov112
+
+-----------------------------------------------------------------------------
+
+MIT License
+
+Copyright (c) 2025-2025 Filippov Ilya (@filippov112)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in 
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
+:root {
+    --personal-table-header:#D3D3D3;
+    --personal-paper:#f5f5f5;
+    --personal-gray:#c7c7c7;
+    --personal-folder:#E4E4E4;
+    --personal-black:#000000;
+    --personal-title:#051e4a;
+    --personal-file-title-bg:white;
+}
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line {
+    max-width: 100%;
+}
+.theme-light .markdown-rendered thead tr, .markdown-rendered thead tr:hover {
+    background-color: var(--personal-table-header);
+}
+body.theme-light {
+    --color-base-20:var(--personal-gray); 
+    --color-base-05:var(--color-accent-1);
+    --color-base-00:var(--personal-paper);
+    --color-base-70:var(--personal-black);
+    --color-base-100:var(--personal-black);
+
+    --background-modifier-hover:rgba(var(--mono-rgb-100), 0.175);
+    --file-header-font-size:13pt;
+    --font-ui-small:var(--font-text-size);
+    --font-ui-medium:var(--font-text-size);
+    --font-ui-smaller:calc(var(--font-text-size) - 5px);
+    --text-faint:var(--personal-black);
+    --icon-size:calc(var(--font-text-size) + 5px);
+    --icon-l:calc(var(--font-text-size) + 5px);
+}
+.theme-light  .inline-title {
+    color:var(--personal-title);
+    background-color: var(--personal-file-title-bg);
+    padding:7pt;
+}
+.theme-light .view-header-title-container {
+    align-items:center;
+    justify-content: start;
+    background-color: var(--personal-file-title-bg);
+    padding:3pt;
+}
+.theme-light .view-header-title {
+    font-weight:bold;
+}
+.theme-light .view-header {
+    padding: 0;
+    gap:0;
+}
+.theme-light .view-header-nav-buttons {
+    --icon-size:22px;
+}
+.theme-light .view-actions {
+    --icon-size:22px;
+}
+.theme-light .tree-item.nav-folder {
+    background-color: var(--personal-folder);
+    border-radius:5px;
+}
+.theme-light .tree-item.nav-file
+{
+    border-radius:5px;
+    background-color: var(--personal-file-title-bg);
+}
+.theme-light .tree-item-children.nav-folder-children {
+    background-color: var(--personal-gray);
+    padding:2px;
+    margin-left:0;
+    padding-left:16px;
+    margin-bottom:10px;
+}
+.theme-light .tree-item-self.nav-file-title.is-active {
+    background-color: color-mix(in srgb, var(--color-accent-1), transparent 50%)
+}
+.theme-light .el-hr {
+    background-color: var(--color-accent-1);
+    height:4px;
+}
+.theme-light .view-header {
+    border-bottom:1px solid var(--color-accent-1);
+}
+.vertical-tab-header-group-title {
+    color:var(--personal-black);
+    font-size:var(--font-text-size);
+    background-color: var(--personal-folder);
+}
