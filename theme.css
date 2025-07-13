@@ -28,14 +28,33 @@ SOFTWARE.
 
 */
 :root {
-    --personal-table-header:#D3D3D3;
     --personal-paper:#f5f5f5;
     --personal-gray:#c7c7c7;
     --personal-folder:#E4E4E4;
     --personal-black:#000000;
     --personal-title:#051e4a;
     --personal-file-title-bg:white;
+
+    --personal-h1:#ff0000;
+    --personal-h2:#48ff00;
+    --personal-h3:#0099ff;
+    --personal-h4:#8c00ff;
+    --personal-h5:#ff00c8;
+    --personal-h6:#ff9900;
+
+    --personal-padding-h1:7pt;
+    --personal-padding-h2:6pt;
+    --personal-padding-h3:5pt;
+    --personal-padding-h4:4pt;
+    --personal-padding-h5:3pt;
+    --personal-padding-h6:2pt;
+
+    --personal-h-color:#0f3b15;
+    
+    --personal-h-grad-angle:2deg;
+    --personal-h-grad-whitespace:15%;
 }
+
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
@@ -43,9 +62,11 @@ SOFTWARE.
     max-width: 100%;
 }
 .theme-light .markdown-rendered thead tr, .markdown-rendered thead tr:hover {
-    background-color: var(--personal-table-header);
+    background-color: color-mix(in srgb, var(--color-accent-1), transparent 70%);
 }
 body.theme-light {
+    --personal-h-bg:color-mix(in srgb, var(--color-accent-1), transparent 90%);
+
     --color-base-20:var(--personal-gray); 
     --color-base-05:var(--color-accent-1);
     --color-base-00:var(--personal-paper);
@@ -66,6 +87,76 @@ body.theme-light {
     background-color: var(--personal-file-title-bg);
     padding:7pt;
 }
+
+.theme-light h1[data-heading] {
+    color:var(--personal-h-color);
+    background-color: var(--personal-h-bg);
+    background-image: linear-gradient(
+        var(--personal-h-grad-angle), 
+        var(--personal-h1) 0%, 
+        #00000000 var(--personal-h-grad-whitespace), 
+        #00000000 calc(100% - var(--personal-h-grad-whitespace)), 
+        var(--personal-h1) 100%
+    );
+    padding:var(--personal-padding-h1);
+}
+.theme-light h2[data-heading] {
+    color:var(--personal-h-color);
+    background-color: var(--personal-h-bg);
+    background-image: linear-gradient(
+        var(--personal-h-grad-angle), 
+        var(--personal-h2) 0%, 
+        #00000000 var(--personal-h-grad-whitespace), 
+        #00000000 calc(100% - var(--personal-h-grad-whitespace)), 
+        var(--personal-h2) 100%
+    );padding:var(--personal-padding-h2);
+}
+.theme-light h3[data-heading] {
+    color:var(--personal-h-color);
+    background-color: var(--personal-h-bg);
+    background-image: linear-gradient(
+        var(--personal-h-grad-angle), 
+        var(--personal-h3) 0%, 
+        #00000000 var(--personal-h-grad-whitespace), 
+        #00000000 calc(100% - var(--personal-h-grad-whitespace)), 
+        var(--personal-h3) 100%
+    );padding:var(--personal-padding-h3);
+}
+.theme-light h4[data-heading] {
+    color:var(--personal-h-color);
+    background-color: var(--personal-h-bg);
+    background-image: linear-gradient(
+        var(--personal-h-grad-angle), 
+        var(--personal-h4) 0%, 
+        #00000000 var(--personal-h-grad-whitespace), 
+        #00000000 calc(100% - var(--personal-h-grad-whitespace)), 
+        var(--personal-h4) 100%
+    );padding:var(--personal-padding-h4);
+}
+.theme-light h5[data-heading] {
+    color:var(--personal-h-color);
+    background-color: var(--personal-h-bg);
+    background-image: linear-gradient(
+        var(--personal-h-grad-angle), 
+        var(--personal-h5) 0%, 
+        #00000000 var(--personal-h-grad-whitespace), 
+        #00000000 calc(100% - var(--personal-h-grad-whitespace)), 
+        var(--personal-h5) 100%
+    );padding:var(--personal-padding-h5);
+}
+.theme-light h6[data-heading] {
+    color:var(--personal-h-color);
+    background-color: var(--personal-h-bg);
+    background-image: linear-gradient(
+        var(--personal-h-grad-angle), 
+        var(--personal-h6) 0%, 
+        #00000000 var(--personal-h-grad-whitespace), 
+        #00000000 calc(100% - var(--personal-h-grad-whitespace)), 
+        var(--personal-h6) 100%
+    );padding:var(--personal-padding-h6);
+}
+
+
 .theme-light .view-header-title-container {
     align-items:center;
     justify-content: start;
