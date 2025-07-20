@@ -10,4 +10,4 @@ Theme features:
 
 ![](screenshots/example.png)
 
-[LICENCE](LICENCE)
+[LICENSE](LICENSE)
