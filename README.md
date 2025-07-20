@@ -7,4 +7,4 @@ Theme features:
 - The accent color of the theme is configured via a global parameter (as in the default theme).
 - Scaling via `Ctrl+scroll` affects not only the text of the note itself, but also the font of the entire application interface.
 
-![[screenshots/example.png]]
+![](screenshots/example.png)
