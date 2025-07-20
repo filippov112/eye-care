@@ -8,3 +8,5 @@ Theme features:
 - Scaling via `Ctrl+scroll` affects not only the text of the note itself, but also the font of the entire application interface.
 
 ![](screenshots/example.png)
+
+[LICENCE](LICENCE)
