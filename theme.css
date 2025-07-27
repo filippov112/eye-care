@@ -35,12 +35,12 @@ SOFTWARE.
     --personal-title:#051e4a;
     --personal-file-title-bg:white;
 
-    --personal-h1:#ff0000;
-    --personal-h2:#48ff00;
-    --personal-h3:#0099ff;
-    --personal-h4:#8c00ff;
-    --personal-h5:#ff00c8;
-    --personal-h6:#ff9900;
+    --personal-h1:#ff000044;
+    --personal-h2:#ff990044;
+    --personal-h3:#48ff0044;
+    --personal-h4:#0099ff44;
+    --personal-h5:#8c00ff44;
+    --personal-h6:#ff00c844;
 
     --personal-padding-h1:7pt;
     --personal-padding-h2:6pt;
@@ -51,8 +51,8 @@ SOFTWARE.
 
     --personal-h-color:#0f3b15;
     
-    --personal-h-grad-angle:2deg;
-    --personal-h-grad-whitespace:15%;
+    --personal-h-grad-angle:45deg;
+    --personal-h-grad-whitespace:11%;
 }
 
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
@@ -90,70 +90,77 @@ body.theme-light {
 
 .theme-light h1[data-heading] {
     color:var(--personal-h-color);
-    background-color: var(--personal-h-bg);
+    /* background-color: var(--personal-h-bg); */
     background-image: linear-gradient(
         var(--personal-h-grad-angle), 
         var(--personal-h1) 0%, 
-        #00000000 var(--personal-h-grad-whitespace), 
+        #00000000 var(--personal-h-grad-whitespace)
+        /* , 
         #00000000 calc(100% - var(--personal-h-grad-whitespace)), 
-        var(--personal-h1) 100%
+        var(--personal-h1) 100% */
     );
     padding:var(--personal-padding-h1);
 }
 .theme-light h2[data-heading] {
     color:var(--personal-h-color);
-    background-color: var(--personal-h-bg);
+    /* background-color: var(--personal-h-bg); */
     background-image: linear-gradient(
         var(--personal-h-grad-angle), 
         var(--personal-h2) 0%, 
-        #00000000 var(--personal-h-grad-whitespace), 
+        #00000000 var(--personal-h-grad-whitespace)
+        /* , 
         #00000000 calc(100% - var(--personal-h-grad-whitespace)), 
-        var(--personal-h2) 100%
+        var(--personal-h2) 100% */
     );padding:var(--personal-padding-h2);
 }
 .theme-light h3[data-heading] {
     color:var(--personal-h-color);
-    background-color: var(--personal-h-bg);
+    /* background-color: var(--personal-h-bg); */
     background-image: linear-gradient(
         var(--personal-h-grad-angle), 
         var(--personal-h3) 0%, 
-        #00000000 var(--personal-h-grad-whitespace), 
+        #00000000 var(--personal-h-grad-whitespace)
+        /* , 
         #00000000 calc(100% - var(--personal-h-grad-whitespace)), 
-        var(--personal-h3) 100%
+        var(--personal-h3) 100% */
     );padding:var(--personal-padding-h3);
 }
 .theme-light h4[data-heading] {
     color:var(--personal-h-color);
-    background-color: var(--personal-h-bg);
+    /* background-color: var(--personal-h-bg); */
     background-image: linear-gradient(
         var(--personal-h-grad-angle), 
         var(--personal-h4) 0%, 
-        #00000000 var(--personal-h-grad-whitespace), 
+        #00000000 var(--personal-h-grad-whitespace)
+        /* , 
         #00000000 calc(100% - var(--personal-h-grad-whitespace)), 
-        var(--personal-h4) 100%
+        var(--personal-h4) 100% */
     );padding:var(--personal-padding-h4);
 }
 .theme-light h5[data-heading] {
     color:var(--personal-h-color);
-    background-color: var(--personal-h-bg);
+    /* background-color: var(--personal-h-bg); */
     background-image: linear-gradient(
         var(--personal-h-grad-angle), 
         var(--personal-h5) 0%, 
-        #00000000 var(--personal-h-grad-whitespace), 
+        #00000000 var(--personal-h-grad-whitespace)
+        /* , 
         #00000000 calc(100% - var(--personal-h-grad-whitespace)), 
-        var(--personal-h5) 100%
+        var(--personal-h5) 100% */
     );padding:var(--personal-padding-h5);
 }
 .theme-light h6[data-heading] {
     color:var(--personal-h-color);
-    background-color: var(--personal-h-bg);
+    /* background-color: var(--personal-h-bg); */
     background-image: linear-gradient(
         var(--personal-h-grad-angle), 
         var(--personal-h6) 0%, 
-        #00000000 var(--personal-h-grad-whitespace), 
+        #00000000 var(--personal-h-grad-whitespace)
+        /* , 
         #00000000 calc(100% - var(--personal-h-grad-whitespace)), 
-        var(--personal-h6) 100%
-    );padding:var(--personal-padding-h6);
+        var(--personal-h6) 100% */
+    );
+    padding:var(--personal-padding-h6);
 }
 
 
@@ -212,4 +219,34 @@ body.theme-light {
 }
 .markdown-source-view .cMenuToolbarGlassAesthetic button svg {
     margin:7px;
+}
+[data-callout="row"]  > div.callout-content:has([data-callout="col"]) {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    padding: 0;
+    background-color: #ffffff;
+}
+div[data-callout="col"], div[data-callout="row"] {
+    background-color: #ffffff00;
+    margin:0;
+    padding:0;
+}
+div[data-callout="row"] {
+    margin-top: 15pt;
+    margin-bottom: 10pt;
+}
+.callout-content > .callout[data-callout="col"] {
+    margin:0;
+}
+div[data-callout="col"] .callout-icon, div[data-callout="row"] .callout-icon {
+    display:none;
+}
+.callout[data-callout="row"]:has(div > .callout[data-callout="col"]) > div.callout-title {
+    display:none;
+}
+div[data-callout="row"] > div > div[data-callout="col"] {
+    border-left:1px solid var(--color-accent-1);
+    padding-right:10px;
+    padding-left:10px;
 }
